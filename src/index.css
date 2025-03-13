@@ -1,10 +1,41 @@
 :root {
   --bg-card: #969fad;
+  --bg-blue-dark: #1f334b;
+  --spacing: 8px;
 }
+
+/* #root {
+  display: grid;
+  place-content: center;
+} */
 
 body {
   background-color: red;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  display: grid;
+  place-content: center;
 }
 .card__wrapper {
-  background-color: var(--bg-card);
+  background-color: #181e27;
+}
+
+.rating_card {
+  --spacing: 24px;
+  padding-block-start: var(--spacing);
+  padding-inline: var(--spacing);
+  padding-block-end: calc(var(--spacing) + 8px);
+}
+
+.rating_card_image {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-blue-dark);
+  border-radius: 50%;
+  /* margin-block-start: 24px; */
+  /* border: 5px solid red; */
 }

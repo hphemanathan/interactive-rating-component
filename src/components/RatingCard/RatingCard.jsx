@@ -1,5 +1,6 @@
 import React from 'react';
 import { range } from '../../../util';
+import SubmitButton from '../SubmitButton/SubmitButton';
 
 function RatingCard() {
   return (
@@ -9,14 +10,17 @@ function RatingCard() {
           <img src='src/assets/icon-star.svg' alt='orange cartoon star' />
         </div>
         <h1>How did we do?</h1>
-        <p>
+        <p className='rating_card_text'>
           Please let us know how we did with your support request. All feedback
           is appreciated to help us improve our offering!
         </p>
 
-        {range(1, 6).map((num) => (
-          <div className='rating'>{num}</div>
-        ))}
+        <div className='rating_card_ratings'>
+          {range(1, 6).map((num) => (
+            <div className='rating_card_rating'>{num}</div>
+          ))}
+        </div>
+        <SubmitButton/>
       </form>
     </div>
   );

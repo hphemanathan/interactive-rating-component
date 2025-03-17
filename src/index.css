@@ -2,6 +2,7 @@
   --bg-card: #969fad;
   --bg-blue-dark: #1f334b;
   --spacing: 8px;
+  --text-color: #799ed4;
 }
 
 /* #root {
@@ -19,13 +20,17 @@ body {
 }
 .card__wrapper {
   background-color: #181e27;
+  width: min(calc(100% - var(--spacing) * 6), 25.75rem);
+  margin-inline: auto;
 }
 
 .rating_card {
-  --spacing: 24px;
-  padding-block-start: var(--spacing);
-  padding-inline: var(--spacing);
-  padding-block-end: calc(var(--spacing) + 8px);
+  /* --spacing: 24px; */
+
+  padding-block-start: calc(var(--spacing) * 3);
+  padding-inline: calc(var(--spacing) * 3);
+  padding-block-end: calc(var(--spacing) * 4);
+  color: var(--text-color);
 }
 
 .rating_card_image {
@@ -36,6 +41,33 @@ body {
   justify-content: center;
   background-color: var(--bg-blue-dark);
   border-radius: 50%;
+  color: var(--text-color);
+  margin-block-end: calc(var(--spacing) * 2);
   /* margin-block-start: 24px; */
   /* border: 5px solid red; */
+}
+
+h1 {
+  margin-block-end: calc(var(--spacing) * 2);
+}
+
+.rating_card_text {
+  margin-block-end: calc(var(--spacing) * 3);
+}
+
+.rating_card_ratings {
+  display: flex;
+  column-gap: calc(var(--spacing) * 2);
+  justify-content: space-between;
+}
+
+.rating_card_rating {
+  display: flex;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-blue-dark);
+  border-radius: 50%;
+  color: var(--text-color);
 }

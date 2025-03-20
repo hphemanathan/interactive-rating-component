@@ -3,6 +3,7 @@
   --bg-blue-dark: #1f334b;
   --spacing: 8px;
   --text-color: #799ed4;
+  --orange: #fc7614;
 }
 
 /* #root {
@@ -22,6 +23,7 @@ body {
   background-color: #181e27;
   width: min(calc(100% - var(--spacing) * 6), 25.75rem);
   margin-inline: auto;
+  border-radius: calc(var(--spacing) * 3);
 }
 
 .rating_card {
@@ -62,6 +64,8 @@ h1 {
 }
 
 .rating_card_rating {
+  outline-color: transparent;
+  border: none;
   display: flex;
   width: 42px;
   height: 42px;
@@ -70,4 +74,68 @@ h1 {
   background-color: var(--bg-blue-dark);
   border-radius: 50%;
   color: var(--text-color);
+  transition: all 0.3s;
+  margin-block-end: calc(var(--spacing) * 4);
+}
+
+.rating_card_rating:hover,
+:focus {
+  background-color: #fc7614;
+  color: var(--bg-blue-dark);
+  cursor: pointer;
+}
+
+.rating_card_rating:active {
+  background-color: white;
+  color: var(--bg-blue-dark);
+}
+
+.btn_submit {
+  display: inline-block;
+  width: 100%;
+  background-color: var(--orange);
+  outline-color: transparent;
+  border: none;
+  padding-block: calc(var(--spacing) * 2);
+  text-align: center;
+  border-radius: 1000px;
+  transition: all 0.3s;
+}
+
+.btn_submit:hover,
+:focus {
+  background-color: white;
+}
+
+/* Thanks Card Styles */
+
+.thanks_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-inline: calc(var(--spacing) * 3);
+  padding-block: calc(var(--spacing) * 4);
+}
+
+.thanks_card_img {
+  margin-block-end: calc(var(--spacing) * 3);
+}
+.thanks_card_rating {
+  background-color: var(--bg-blue-dark);
+  color: var(--orange);
+  margin-block-end: calc(var(--spacing) * 3);
+  padding: calc(var(--spacing) * 1.5);
+  border-radius: calc(var(--spacing) * 3);
+  padding-inline: calc(var(--spacing) * 3);
+}
+
+.thanks_card_thanks {
+  font-size: 24px;
+  color: white;
+}
+
+.thanks_card_text {
+  color: var(--text-color);
+  text-align: center;
 }

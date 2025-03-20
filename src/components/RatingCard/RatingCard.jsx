@@ -17,7 +17,7 @@ function RatingCard() {
 
         <div className='rating_card_ratings'>
           {range(1, 6).map((num) => (
-            <div className='rating_card_rating'>{num}</div>
+            <button className='rating_card_rating'>{num}</button>
           ))}
         </div>
         <SubmitButton/>

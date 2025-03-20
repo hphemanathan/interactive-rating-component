@@ -2,7 +2,7 @@ import React from 'react';
 
 function SubmitButton() {
   return <div>
-    <button>Submit</button>
+    <button className='btn_submit'>Submit</button>
   </div>;
 }
 

@@ -2,10 +2,13 @@ import React from 'react';
 import { range } from '../../../util';
 import SubmitButton from '../SubmitButton/SubmitButton';
 
-function RatingCard() {
+function RatingCard({setIsSubmitted, setRating}) {
   return (
     <div className='rating_card'>
-      <form onSubmit={() => console.log("checking")} className='form'>
+      <form onSubmit={(event) => {
+        event.preventDefault()
+        setIsSubmitted(true);
+      }} className='form'>
         <div className='rating_card_image'>
           <img src='src/assets/icon-star.svg' alt='orange cartoon star' />
         </div>
@@ -17,7 +20,17 @@ function RatingCard() {
 
         <div className='rating_card_ratings'>
           {range(1, 6).map((num) => (
-            <button className='rating_card_rating'>{num}</button>
+            <button  key = {num} className='rating_card_rating'
+            onClick={event => {
+              event.preventDefault();
+              const nextRating = event.target.textContent;
+              console.log(nextRating);
+              setRating(nextRating)
+              console.log(nextRating);
+               
+
+            }}
+            >{num}</button>
           ))}
         </div>
         <SubmitButton/>

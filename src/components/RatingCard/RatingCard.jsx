@@ -5,7 +5,7 @@ import SubmitButton from '../SubmitButton/SubmitButton';
 function RatingCard() {
   return (
     <div className='rating_card'>
-      <form className='form'>
+      <form onSubmit={() => console.log("checking")} className='form'>
         <div className='rating_card_image'>
           <img src='src/assets/icon-star.svg' alt='orange cartoon star' />
         </div>
